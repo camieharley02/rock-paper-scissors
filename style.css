@@ -9,10 +9,13 @@
   --bg-grad2: hsl(237, 49%, 15%);
   --scissors-gradient: hsl(39, 89%, 49%);
   --scissors: hsl(40, 84%, 53%);
-  --paper-radient: hsl(230, 89%, 62%);
+  --paper-gradient: hsl(230, 89%, 62%);
   --paper: hsl(230, 89%, 65%);
   --rock-gradient: hsl(349, 71%, 52%); 
   --rock: hsl(349, 70%, 56%);
+  --shadow-light: #00000026;
+  --shadow-medium: #0000004d;
+  
 }
 
 *{
@@ -25,6 +28,7 @@ body{
   font-family: 'Barlow Semi Condensed', sans-serif;
   background: radial-gradient(at top, var(--bg-grad1), var(--bg-grad2));
   min-height: 100vh;
+  text-transform: uppercase;
 }
 
 .container{
@@ -33,6 +37,111 @@ body{
   margin: 0 auto;
   padding-top: 2rem;
 }
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  border: 3px solid var(--header-outline);
+  border-radius: 20px;
+  padding: 1rem 1.4rem 1rem 2rem;
+}
+.logo img{
+  height: 100%;
+}
+.score{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-text);
+  border-radius: 10px;
+  width: 150px;
+  height: 100%;
+  line-height: 1;
+}
+.scoreTitle{
+  font-size: 1rem;
+  text-align: center;
+  color: var(--score-text);
+}
+.scoreNumber{
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+/* game */
+.game{
+  position: relative;
+  display: grid;
+  grid-template-columns: (repeat(2, 1fr));
+  grid-template-areas: "paper scissors" "rock rock";
+  place-items: center;
+  height: 30rem;
+  padding-top: 4rem;
+}
+.game::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 28%;
+  top: 35%;
+  background: url(images/bg-triangle.svg) no-repeat;
+  z-index: -1;
+}
+.choice-btn{
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.choice{
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background: var(--light-text);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0.5rem var(--shadow-light);
+}
+.choice::before{
+  content: '';
+  position: absolute;
+  left: -15%;
+  top: -15%;
+  width: 130%;
+  height: 130%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.choice img{
+  transform: scale(1.5);
+}
+.choice.rock::before{
+  background: linear-gradient(to bottom, var(--rock-gradient ), var(--rock));
+  box-shadow: 0 0.5rem var(--shadow-medium), 0 0.5rem var(--rock);
+}
+.choice.paper::before{
+  background: linear-gradient(to bottom, var(--paper-gradient ), var(--paper));
+  box-shadow: 0 0.5rem var(--shadow-medium), 0 0.5rem var(--paper);
+}
+.choice.scissors::before{
+  background: linear-gradient(to bottom, var(--scissors-gradient ), var(--scissors));
+  box-shadow: 0 0.5rem var(--shadow-medium), 0 0.5rem var(--scissors);
+}
+.choice-btn[data-choice="rock"]{
+  grid-area: rock;
+}
+.choice-btn[data-choice="paper"]{
+  grid-area: paper;
+}
+.choice-btn[data-choice="scissors"]{
+  grid-area: scissors;
+}
+
 .attribution { 
   font-size: 11px; 
   text-align: center; 

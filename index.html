@@ -10,18 +10,33 @@
   </head>
   <body>
     <div class="container">
-      <header class="heaher">
+      <header class="header">
         <img src="images/logo.svg" alt="logo" class="logo">
         <div class="score">
           <div class="scoreTitle">Score</div>
           <div class="scoreNumber">12</div>
         </div>
       </header>
+
+      <section class="game">
+        <button class="choice-btn" data-choice="rock" onclick="playGame('rock');">
+          <div class="choice rock">
+            <img src="images/icon-rock.svg" alt="rock">
+          </div>
+        </button>
+        <button class="choice-btn" data-choice="paper" onclick="playGame('paper');">
+          <div class="choice paper">
+            <img src="images/icon-paper.svg" alt="paper">
+          </div>
+        </button>
+        <button class="choice-btn" data-choice="scissors" onclick="playGame('scissors');">
+          <div class="choice scissors">
+            <img src="images/icon-scissors.svg" alt="scissors">
+          </div>
+        </button>
+      </section>
     </div>
     
-    <button onclick="playGame('rock');">Rock</button>
-    <button onclick="playGame('paper');">Paper</button>
-    <button onclick="playGame('scissors');">Scissors</button>
   
 </body>
 </html>
