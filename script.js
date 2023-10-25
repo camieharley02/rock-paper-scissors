@@ -48,3 +48,17 @@ function pickComputerMove() {
 
   return computerMove;
 }
+setTimeout(() => {
+  document.body.classList.remove("preload")
+}, 500);
+
+const btnRules = document.querySelector('.rules-btn')
+const btnClose = document.querySelector('.close-btn')
+const modalRules = document.querySelector('.module')
+
+btnRules.addEventListener('click', () => {
+  modalRules.classList.toggle('show-module')
+});
+btnClose.addEventListener('click', () => {
+  modalRules.classList.toggle('show-module')
+});

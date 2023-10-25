@@ -182,4 +182,38 @@ body{
   display: grid;
   place-items: center;
   background: var(--shadow-medium);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+.module_container{
+  background: var(--light-text);
+  border-radius: 0.5rem;
+}
+.module_header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem;
+}
+.module_heading{
+  font-size: 1.5rem;
+  color: var(--dark-text);
+}
+.close-btn{
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.rules-image{
+  padding: 2rem 4rem;
+}
+.show-module{
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.preload *{
+  transition: none;
 }
