@@ -83,8 +83,8 @@ section::before{
   position: absolute;
   left: 20%;
   top: 25%;
-  width: 15.875rem;
-  height: 17.9375rem;
+  width: 18.875rem;
+  height: 18.9375rem;
   z-index: -1;
 }
 .images{

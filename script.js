@@ -1,3 +1,22 @@
+const rulesButton = document.querySelector('.rules-btn');
+const topRule = document.querySelector('.top-rule');
+
+rulesButton.addEventListener('click', () => {
+  topRule.innerHTML = `
+    <div class="header">
+      <h2>RULES</h2>
+      <img src="images/icon-close.svg" alt="close" id="close-btn">
+    </div>`;
+  topRule.classList.toggle('hide');
+
+  const closeBtn = document.getElementById('close-btn');
+  closeBtn.addEventListener('click', () => {
+    topRule.innerHTML = '';
+    topRule.classList.add('hide');
+  });
+});
+
+
 // // Get the score element by its ID
 // const scoreElement = document.getElementById('score');
 
@@ -130,39 +149,4 @@
 //   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
 //     computerMove = 'scissors';
 //   }
-
-//   return computerMove;
-// }
-// setTimeout(() => {  document.getElementById("hidden").classList.remove("hidden");
-// }, 500);
-
-
-// Get references to the button and modal
-
-//   // Toggle the visibility of the modal
-//  if (modal.style.display === 'none' || modal.style.display === '') {
-//     modal.style.display = 'block';
-//   } else {
-//     modal.style.display = 'none';
-//   }
-// ;
-
-
-const rulesButton = document.querySelector('.rules-btn');
-const topRule = document.querySelector('.top-rule');
-
-rulesButton.addEventListener('click', () => {
-  topRule.innerHTML = `
-    <div class="header">
-      <h2>RULES</h2>
-      <img src="images/icon-close.svg" alt="close" id="close-btn">
-    </div>`;
-  topRule.classList.toggle('hide');
-
-  const closeBtn = document.getElementById('close-btn');
-  closeBtn.addEventListener('click', () => {
-    topRule.innerHTML = '';
-    topRule.classList.add('hide');
-  });
-});
 

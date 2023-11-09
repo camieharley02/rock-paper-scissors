@@ -1,19 +1,13 @@
 .main{
-  height: 85%;
+  height: 80%;
 }
-section{
-  height: 25rem;
+header{
+  margin: 2rem 0 0 0;
 }
 section::before{
   background: url(images/Polygon.svg) no-repeat; 
-}
-.images{
-  padding-top: 0;
-  grid-template-areas: 
-  "scissors" 
-  "spock paper" 
-  "lizard rock";
-  grid-template-columns: repeat(2, 3fr);
+  width: 21rem;
+  height: 20rem;
 }
 .choice{
   width: 12rem;
