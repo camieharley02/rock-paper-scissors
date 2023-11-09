@@ -1,11 +1,13 @@
 body{
   height: 45rem;
 }
-header{
-  margin: 1rem 0 0 0;
+.main{
+  height: 95%;
+  
 }
 section::before{
   background: url(images/Polygon.svg) no-repeat; 
+  background-size: 18rem;
   width: 21.5625rem;
   height: 21.5625rem;
 }
@@ -19,27 +21,27 @@ section::before{
 }
 .scissors {
   top: 40%;
-  left: 63%;
+  left: 60%;
   transform: translate(-50%, -50%);
 }
 .spock {
-  top: 65%;
+  top: 60%;
   left: 34%;
   transform: translate(-50%, -50%);
 }
 .paper {
-  top: 65%;
-  left: 89%;
+  top: 60%;
+  left: 85%;
   transform: translate(-50%, -50%);
 }
 .lizard {
-  top: 103%;
-  left: 45%;
+  top: 95%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 .rock {
-  top: 109%;
-  left: 80%;
+  top: 92%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
 .header{
