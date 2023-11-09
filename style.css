@@ -90,7 +90,9 @@ section::before{
 .images{
   display: grid;
   padding-top: 2rem;
-  grid-template-areas: "paper scissors" "rock rock";
+  grid-template-areas: 
+  "paper scissors" 
+  "rock rock";
   place-items: center;
   width: 35rem;
   height: 100%;

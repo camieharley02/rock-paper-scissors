@@ -1,19 +1,14 @@
-.main{
-  height: 80%;
-}
-header{
-  margin: 2rem 0 0 0;
-}
 section::before{
   background: url(images/Polygon.svg) no-repeat; 
   width: 21rem;
   height: 20rem;
 }
+/* .images{
+  
+} */
 .choice{
-  width: 12rem;
-  height: 2rem;
-  display: grid;
-  cursor: pointer;
+  width: 9.0625rem;
+  height: 9.25rem;
 }
 .header{
   background-image: url(images/image-rules-bonus.svg);
