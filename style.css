@@ -119,7 +119,6 @@ section::before{
   "you-picked ai-picked";
   max-width: 1000px;
   margin: 0 auto;
-
 }
 .results-text{
   font-size: 1.5rem;
@@ -187,7 +186,6 @@ section::before{
   top: 50%;
   left: 49.7%;
   transform: translate(-50%, -50%);
-
 }
 .header h2{
   font-size: 1.5rem;

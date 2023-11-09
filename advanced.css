@@ -1,14 +1,46 @@
+body{
+  height: 45rem;
+}
+header{
+  margin: 1rem 0 0 0;
+}
 section::before{
   background: url(images/Polygon.svg) no-repeat; 
-  width: 21rem;
-  height: 20rem;
+  width: 21.5625rem;
+  height: 21.5625rem;
 }
-/* .images{
-  
-} */
 .choice{
   width: 9.0625rem;
   height: 9.25rem;
+  position: absolute;
+}
+.images {
+  position: relative;
+}
+.scissors {
+  top: 40%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+.spock {
+  top: 65%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+}
+.paper {
+  top: 65%;
+  left: 89%;
+  transform: translate(-50%, -50%);
+}
+.lizard {
+  top: 103%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+.rock {
+  top: 109%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
 .header{
   background-image: url(images/image-rules-bonus.svg);
