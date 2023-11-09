@@ -1,0 +1,26 @@
+.main{
+  height: 85%;
+}
+section{
+  height: 25rem;
+}
+section::before{
+  background: url(images/Polygon.svg) no-repeat; 
+}
+.images{
+  padding-top: 0;
+  grid-template-areas: 
+  "scissors" 
+  "spock paper" 
+  "lizard rock";
+  grid-template-columns: repeat(2, 3fr);
+}
+.choice{
+  width: 12rem;
+  height: 2rem;
+  display: grid;
+  cursor: pointer;
+}
+.header{
+  background-image: url(images/image-rules-bonus.svg);
+}
