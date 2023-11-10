@@ -52,6 +52,9 @@ section::before{
 .header{
   background-image: url(images/image-rules-bonus.svg);
   background-size: 21rem 20.625rem;
+  width: 25rem;
+  height: 28.8125rem;
+  top: 56%;
 }
 
 
