@@ -22,13 +22,7 @@ section::before{
 .choice img {
   width: 100%;
   height: auto;
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-}
-
-.choice:hover img {
-  /* transform: scale(1.1); */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
+ }
 
 .scissors {
   top: 40%;
@@ -57,4 +51,35 @@ section::before{
 }
 .header{
   background-image: url(images/image-rules-bonus.svg);
+  background-size: 21rem 20.625rem;
+}
+
+
+@media (min-width: 320px) and (max-width: 420px) {
+  header{
+    margin: 2rem 0 0 3rem;
+  }
+  header img{
+    width: 3.01956rem;
+    height: 3rem;
+  }
+  .choice img{
+    width: 6rem;
+    height: 6.0625rem;
+  }
+  section{
+    margin-top: 4rem;
+    width: 25rem;
+    height: 25rem;
+    left: 3rem;
+  }
+  section::before{
+    background: url(images/polygon-phone.svg) no-repeat;
+    width: 14.1875rem;
+    height: 14.1875rem;
+    left: 14%;
+  }
+  .header{
+    background-size: 19.4375rem 19.0625rem;
+  }
 }

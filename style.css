@@ -97,13 +97,13 @@ section::before{
   width: 35rem;
   height: 100%;
 }
-.choice{
+.choice img{
   width: 12.375rem;
   height: 12.6875rem;
   display: grid;
   cursor: pointer;
 }
-.choice:hover{
+.choice:hover img{
   box-shadow: 0 0 0 30px rgba(253, 253, 253, 0.05);
   border-radius: 50%;
 }
@@ -169,32 +169,35 @@ section::before{
   display: none;
 }
 .header {
-  width: 23rem;
-  height: 23rem;
+  width: 25rem;
+  height: 25.9375rem;
   color: var(--bg-grad2);
   border-radius: 0.5rem;
   background: var(--light-text);
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.20);
   background-image: url(images/image-rules.svg);
   background-repeat: no-repeat;
-  background-size: 13rem;
+  background-size: 19.0625rem 16.9375rem;
   background-position: 50% 70%;
   display: flex;
   justify-content: space-between;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   position: absolute;
   top: 50%;
   left: 49.7%;
   transform: translate(-50%, -50%);
 }
+/* .header:before{
+  background: var(--bg-grad2);
+} */
 .header h2{
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--dark-text);
 }
 #close-btn{
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 1.19325rem;
+  height: 1.19325rem;
 }
 .rules-img{
   padding: 2rem 4rem;
@@ -232,11 +235,15 @@ button:hover{
 }
 
 @media (min-width: 320px) and (max-width: 420px) {
+  body{
+    width: 23.4375rem;
+    height: 45rem;
+  }
   header{
     width: 19.4375rem;
     height: 6rem; 
     border-radius: 0.3125rem;
-    margin-top: -6rem;
+    margin-top: -5rem;
   }
   header img{
     width: 6rem;
@@ -272,7 +279,7 @@ button:hover{
     height: 8rem;
     width: 8rem;
   }
-   .choice img{
+  .choice img{
     width: 8.125rem;
     height: 8.3125rem;
     display: grid;
@@ -286,11 +293,33 @@ button:hover{
   .rules-btn{
     bottom: 1rem;
     font-size: 0.8rem;
-    right: 0.5rem;
+    right: 0rem;
+  }
+  .header{
+    width: 23.4375rem;
+    height: 46.875rem;
+    background-size: 19.0625rem 16.9375rem;
+    text-align: center; 
+    background-position: center;   
+  }
+  .header h2 {
+    position: relative; 
+    margin: 2rem 7rem;
+    font-size: 2rem;
+  }
+  .header img {
+    position: absolute;
+    bottom: 3rem; 
+    left: 50%;
+    transform: translateX(-50%); 
+  } 
+  #close-btn{
+    width: 1.19325rem;
+    height: 1.19325rem;
   }
   .advanced-btn{
     bottom: 1rem;
     font-size: 0.8rem;
-    left: 0.5rem;
+    left: 0rem;
   }
 }
