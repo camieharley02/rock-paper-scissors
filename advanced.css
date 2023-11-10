@@ -2,8 +2,11 @@ body{
   height: 45rem;
 }
 .main{
-  height: 95%;
+  height: auto;
   
+}
+header{
+  margin: 2rem 0 0 0;
 }
 section::before{
   background: url(images/Polygon.svg) no-repeat; 
@@ -16,9 +19,17 @@ section::before{
   height: 9.25rem;
   position: absolute;
 }
-.images {
-  position: relative;
+.choice img {
+  width: 100%;
+  height: auto;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
+
+.choice:hover img {
+  /* transform: scale(1.1); */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
 .scissors {
   top: 40%;
   left: 60%;
@@ -40,7 +51,7 @@ section::before{
   transform: translate(-50%, -50%);
 }
 .rock {
-  top: 92%;
+  top: 95%;
   left: 75%;
   transform: translate(-50%, -50%);
 }

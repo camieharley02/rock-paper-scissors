@@ -17,6 +17,25 @@ rulesButton.addEventListener('click', () => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // Get the score element by its ID
 // const scoreElement = document.getElementById('score');
 
