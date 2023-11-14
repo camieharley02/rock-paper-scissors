@@ -20,12 +20,12 @@ const options = {
   "rock": "images/rock.svg",
   "paper": "images/paper.svg",
   "scissors": "images/scissors.svg",
-  // "lizard": "images/lizard.svg",
-  // "spock": "images/spock.svg",
-}
+  "lizard": "images/lizard.svg",
+  "spock": "images/spock.svg",
+};
+
 const userMove = (hand) => {
-  console.log(hand);
-// hide current page
+  // hide current page
   let images = document.querySelector(".images");
   images.style.display = "none";
   // show second page
@@ -34,27 +34,19 @@ const userMove = (hand) => {
 
   // displays user choice
   document.getElementById("userChoice").src = options[hand];
-   
-  let computerHand = computerMove();
-  midButton(hand, computerHand);
 
+  let computerHand = computerMove(true); // Always consider all 5 options for the computer
+  midButton(hand, computerHand);
 }
 
 const computerMove = () => {
-  let hand = [
-    "rock", 
-    "paper", 
-    "scissors", 
-    // "lizard", 
-    // "spock"
-  ]
-  let computerHand = hand[Math.floor(Math.random() * hand.length)]
+  let hand = ["rock", "paper", "scissors", "lizard", "spock"];
+  let computerHand = hand[Math.floor(Math.random() * hand.length)];
 
   document.getElementById("computerChoice").src = options[computerHand];
 
   return computerHand;
 }
-
 
  let SCORE = 0;
 
@@ -95,8 +87,8 @@ const restartGame = () => {
   let results = document.querySelector(".results");
   results.style.display = "none";
 
-  let hand = document.querySelector(".hand");
-  hand.style.display = "flex";
+  let img = document.querySelector(".images");
+  img.style.display = "grid";
 }
 
 const setDecision = (midText) => {

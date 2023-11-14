@@ -76,7 +76,7 @@ header{
     height: 25rem;
     left: 3rem;
   }
-  section::before{
+  .images::before{
     background: url(images/polygon-phone.svg) no-repeat;
     width: 14.1875rem;
     height: 14.1875rem;

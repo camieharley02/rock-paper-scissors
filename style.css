@@ -279,7 +279,7 @@ button:hover{
     width: 20rem;
     height: 20rem;
   }
-  section::before{
+  .images::before{
     background: url(images/path-mobile.svg) no-repeat;    
   }
   .images{
