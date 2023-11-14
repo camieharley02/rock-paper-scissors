@@ -115,7 +115,8 @@ section{
 }
 .results{
   width: 900px;
-  display: flex;
+  display: none;
+  margin-bottom: 5rem;
 }
 .results img{
   width: 18.36994rem;
@@ -128,8 +129,36 @@ section{
   color: var(--light-text);
   font-size: 1.5rem;
   margin: 20px 0 50px ;
+  text-align: center;
 }
-
+.results .userChoice{
+  display: flex;
+  justify-content: center;
+}
+.midButton{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.midText h1{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.newGame{
+  background-color: var(--light-text);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--dark-text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.15s;
+}
+.newGame:hover{
+  transform: translate3d(0px, -2px, 0px);
+  color: #DB2E4D;
+}
 .rules-btn{
   position: absolute;
   bottom: 2rem;
