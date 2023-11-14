@@ -20,8 +20,8 @@ const options = {
   "rock": "images/rock.svg",
   "paper": "images/paper.svg",
   "scissors": "images/scissors.svg",
-  "lizard": "images/lizard.svg",
-  "spock": "images/spock.svg",
+  // "lizard": "images/lizard.svg",
+  // "spock": "images/spock.svg",
 }
 const userMove = (hand) => {
   console.log(hand);
@@ -36,13 +36,19 @@ const userMove = (hand) => {
   document.getElementById("userChoice").src = options[hand];
    
   let computerHand = computerMove();
-  midButton(userChoice, computerHand);
+  midButton(hand, computerHand);
 
 }
 
 const computerMove = () => {
-  let hand = ["rock", "paper", "scissors", "lizard", "spock"]
-  let computerHand = hand[Math.floor(Math.random() * 5)]
+  let hand = [
+    "rock", 
+    "paper", 
+    "scissors", 
+    // "lizard", 
+    // "spock"
+  ]
+  let computerHand = hand[Math.floor(Math.random() * hand.length)]
 
   document.getElementById("computerChoice").src = options[computerHand];
 
@@ -53,44 +59,56 @@ const computerMove = () => {
  let SCORE = 0;
 
 const midButton = (userChoice, computerHand)=>{
-  if (userChoice === "scissors" && computerHand === "paper"){
-    setDecision("YOU WIN");
-  } else if (userChoice === "scissors" && computerMove === "rock") {
+  if (userChoice == "paper" && computerHand == "scissors") {
     setDecision("YOU LOSE");
-  } else if (userChoice === "scissors" && computerMove === "scissors") {
+  }
+  if (userChoice == "paper" && computerHand == "rock") {
+    setDecision("YOU WIN");
+    setScore(SCORE + 1);
+  }
+  if (userChoice == "paper" && computerHand == "paper") {
     setDecision("TIE");
   }
-
-  if (userChoice === "rock" && computerHand === "paper"){
-    setDecision("YOU LOSE");
-  } else if (userChoice === "rock" && computerMove === "rock") {
-    setDecision("TIE");
-  } else if (userChoice === "rock" && computerMove === "scissors") {
+  if (userChoice == "rock" && computerHand == "scissors") {
     setDecision("YOU WIN");
+    setScore(SCORE + 1);
   }
-
-  if (userChoice === "paper" && computerHand === "paper"){
-    setDecision("TIE");
-  } else if (userChoice === "paper" && computerMove === "rock") {
-    setDecision("YOU WIN");
-  } else if (userChoice === "paper" && computerMove === "scissors") {
+  if (userChoice == "rock" && computerHand == "paper") {
     setDecision("YOU LOSE");
+  }
+  if (userChoice == "rock" && computerHand == "rock") {
+    setDecision("TIE");
+  }
+  if (userChoice == "scissors" && computerHand == "scissors") {
+    setDecision("TIE");
+  }
+  if (userChoice == "scissors" && computerHand == "rock") {
+    setDecision("YOU LOSE");
+  }
+  if (userChoice == "scissors" && computerHand == "paper") {
+    setDecision("YOU WIN");
+    setScore(SCORE + 1);
   }
 }
-const setDecision = (decision) => {
+
+const restartGame = () => {
+  let results = document.querySelector(".results");
+  results.style.display = "none";
+
+  let hand = document.querySelector(".hand");
+  hand.style.display = "flex";
+}
+
+const setDecision = (midText) => {
+  document.querySelector(".midText h1").innerText = midText;
+}
+const setScore = (scores) => {
+  SCORE = scores;
+  document.querySelector(".scores span").innerText = scores;
+}
   
-}
-const setScore = (score) => {
-  if (result === "YOU WIN") {
-    score.wins += 1;
-  } else if (result === "YOU LOSE") {
-    score.losses -= 1;
-  } else if (result === "TIE") {
-    score.ties += 1;
-  }
-}
-  
 
 
 
 
+``
