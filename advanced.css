@@ -1,14 +1,14 @@
-body{
+/* body{
   height: 45rem;
-}
-.main{
+} */
+/* .main{
   height: auto;
-  
-}
+  justify-content: center; */
+/* } */
 header{
   margin: 2rem 0 0 0;
 }
-section::before{
+.images::before{
   background: url(images/Polygon.svg) no-repeat; 
   background-size: 18rem;
   width: 21.5625rem;

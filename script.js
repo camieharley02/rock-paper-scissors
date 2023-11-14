@@ -17,8 +17,12 @@ rulesButton.addEventListener('click', () => {
 });
 
 
+const userMove = (hand) => {
+  console.log(hand);
 
-
+  let images = document.querySelector(".images");
+  images.style.display = "none";
+}
 
 
 
