@@ -53,6 +53,7 @@ const computerMove = () => {
 const midButton = (userChoice, computerHand)=>{
   if (userChoice == "paper" && computerHand == "scissors") {
     setDecision("YOU LOSE");
+    setScore(SCORE - 1);
   }
   if (userChoice == "paper" && computerHand == "rock") {
     setDecision("YOU WIN");
@@ -67,6 +68,7 @@ const midButton = (userChoice, computerHand)=>{
   }
   if (userChoice == "rock" && computerHand == "paper") {
     setDecision("YOU LOSE");
+    setScore(SCORE - 1);
   }
   if (userChoice == "rock" && computerHand == "rock") {
     setDecision("TIE");
@@ -76,6 +78,7 @@ const midButton = (userChoice, computerHand)=>{
   }
   if (userChoice == "scissors" && computerHand == "rock") {
     setDecision("YOU LOSE");
+    setScore(SCORE - 1);
   }
   if (userChoice == "scissors" && computerHand == "paper") {
     setDecision("YOU WIN");

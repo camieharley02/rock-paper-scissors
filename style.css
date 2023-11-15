@@ -116,7 +116,7 @@ section{
 .results{
   width: 900px;
   display: none;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 .results img{
   width: 18.36994rem;
@@ -205,10 +205,6 @@ section{
 }
 .rules-img{
   padding: 2rem 4rem;
-}
-.show-modal{
-  opacity: 1;
-  pointer-events: initial;
 }
 .advanced-btn{
   position: absolute;
