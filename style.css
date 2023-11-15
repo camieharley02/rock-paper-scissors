@@ -30,13 +30,13 @@ body {
  }
 .main{
   width: 100vw;
-  height: 100vh;
+  height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 0;
+  top: 3rem;
 }
 header{
   width: 43.75rem;
@@ -47,7 +47,8 @@ header{
   border: 3px solid var(--header-outline);
   border-radius: 20px;
   padding: 1rem 1.4rem 1rem 2rem;
-
+top: 0;
+position: absolute;
 }
 .scores{
   display: flex;
@@ -79,6 +80,7 @@ span{
 section{
   position: relative;
   height: 30rem;
+  top: 4rem;
 }
 .images::before{
   background: url(images/Path-desktop.svg) no-repeat; 
@@ -229,9 +231,10 @@ button:hover{
   background:var(--light-text);
   color: #3B4262;
 }
-
-.hide{
-  visibility: visible;
+.winner::before {
+  border-radius: 50%;
+  box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.027), 
+  0 0 0 100px rgba(255, 255, 255, 0.027), 0 0 0 150px rgba(255, 255, 255, 0.023);
 }
 
 @media (min-width: 320px) and (max-width: 430px) {
@@ -319,5 +322,40 @@ button:hover{
   #close-btn{
     width: 1.19325rem;
     height: 1.19325rem;
+  }
+  .results{
+    width: 2rem;
+    display: none;
+    margin-bottom: 10rem;
+  }
+  .results img{
+    width: 8.125rem;
+    height: 8.3125rem;
+  }
+  .results h1{
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 20px 0 50px ;
+    text-align: center;
+  }
+  .results .userChoice{
+    display: flex;
+    justify-content: center;
+  }
+  .midButton{
+    display: flex;
+    flex-direction: column;
+  }
+  .newGame{
+    background-color: var(--light-text);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: var(--dark-text);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.15s;
   }
 }

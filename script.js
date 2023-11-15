@@ -50,44 +50,32 @@ const computerMove = () => {
 
  let SCORE = 0;
 
-const midButton = (userChoice, computerHand)=>{
-  if (userChoice == "paper" && computerHand == "scissors") {
-    setDecision("YOU LOSE");
-    setScore(SCORE - 1);
-  }
-  if (userChoice == "paper" && computerHand == "rock") {
-    setDecision("YOU WIN");
-    setScore(SCORE + 1);
-  }
-  if (userChoice == "paper" && computerHand == "paper") {
-    setDecision("TIE");
-  }
-  if (userChoice == "rock" && computerHand == "scissors") {
-    setDecision("YOU WIN");
-    setScore(SCORE + 1);
-  }
-  if (userChoice == "rock" && computerHand == "paper") {
-    setDecision("YOU LOSE");
-    setScore(SCORE - 1);
-  }
-  if (userChoice == "rock" && computerHand == "rock") {
-    setDecision("TIE");
-  }
-  if (userChoice == "scissors" && computerHand == "scissors") {
-    setDecision("TIE");
-  }
-  if (userChoice == "scissors" && computerHand == "rock") {
-    setDecision("YOU LOSE");
-    setScore(SCORE - 1);
-  }
-  if (userChoice == "scissors" && computerHand == "paper") {
-    setDecision("YOU WIN");
-    setScore(SCORE + 1);
-  }
-}
+ const midButton = (userChoice, computerHand) => {
+  const outcomes = {
+    'rock': { 'rock': 'TIE', 'paper': 'YOU LOSE', 'scissors': 'YOU WIN', 'lizard': 'YOU WIN', 'spock': 'YOU LOSE' },
+    'paper': { 'rock': 'YOU WIN', 'paper': 'TIE', 'scissors': 'YOU LOSE', 'lizard': 'YOU LOSE', 'spock': 'YOU WIN' },
+    'scissors': { 'rock': 'YOU LOSE', 'paper': 'YOU WIN', 'scissors': 'TIE', 'lizard': 'YOU WIN', 'spock': 'YOU LOSE' },
+    'lizard': { 'rock': 'YOU LOSE', 'paper': 'YOU WIN', 'scissors': 'YOU LOSE', 'lizard': 'TIE', 'spock': 'YOU WIN' },
+    'spock': { 'rock': 'YOU WIN', 'paper': 'YOU LOSE', 'scissors': 'YOU WIN', 'lizard': 'YOU LOSE', 'spock': 'TIE' }
+  };
 
+  const result = outcomes[userChoice][computerHand];
+  const scoreChange = result === 'YOU WIN' ? 1 : result === 'YOU LOSE' ? -1 : 0;
+  
+  setDecision(result);
+  setScore(SCORE + scoreChange);
+  
+  // Add the winner class based on the result
+  if (result === 'YOU WIN') {
+    results.getElementById('userChoice').classList.add('winner');
+  } else if (result === 'YOU LOSE') {
+    results.getElementById('computerChoice').classList.add('winner');
+  }  
+  }
+  
+
+let results = document.querySelector(".results");
 const restartGame = () => {
-  let results = document.querySelector(".results");
   results.style.display = "none";
 
   let img = document.querySelector(".images");
