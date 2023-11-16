@@ -47,8 +47,8 @@ header{
   border: 3px solid var(--header-outline);
   border-radius: 20px;
   padding: 1rem 1.4rem 1rem 2rem;
-top: 0;
-position: absolute;
+  top: 0;
+  position: absolute;
 }
 .scores{
   display: flex;
@@ -107,6 +107,7 @@ section{
   height: 12.6875rem;
   display: grid;
   cursor: pointer;
+  transition: all 0.25s;
 }
 .choice:hover img{
   box-shadow: 0 0 0 30px rgba(253, 253, 253, 0.05);
@@ -118,7 +119,7 @@ section{
 .results{
   width: 900px;
   display: none;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 .results img{
   width: 18.36994rem;
@@ -133,7 +134,7 @@ section{
   margin: 20px 0 50px ;
   text-align: center;
 }
-.results .userChoice{
+ #userChoice{
   display: flex;
   justify-content: center;
 }
@@ -143,9 +144,10 @@ section{
   align-items: center;
   justify-content: center;
 }
-.midText h1{
+.midText h2{
   font-size: 3.5rem;
   font-weight: 700;
+  color: var(--light-text);
 }
 .newGame{
   background-color: var(--light-text);
@@ -241,7 +243,6 @@ button:hover{
   body{
     width: 100vw;
     height: 100vh;
-    border: 1px solid #ccc;
   }
   header{
     width: 19.4375rem;
@@ -259,7 +260,9 @@ button:hover{
     width: 95vw;
     height: 90vh;
     margin-left: 2.5vw;
-    margin-top: 2rem;
+    /* background-color: red; */
+    display: flex;
+flex-direction: row;  
   }
   .scores{
     line-height: 2.5rem;
@@ -277,6 +280,7 @@ button:hover{
   section{
     width: 20rem;
     height: 20rem;
+    top: 0;
   }
   .images::before{
     background: url(images/path-mobile.svg) no-repeat;    
@@ -303,6 +307,7 @@ button:hover{
   .header{
     width: 100vw;
     height: 100vh;
+    
     background-size: 19.0625rem 16.9375rem;
     text-align: center; 
     background-position: center;   
@@ -324,38 +329,42 @@ button:hover{
     height: 1.19325rem;
   }
   .results{
-    width: 2rem;
-    display: none;
-    margin-bottom: 10rem;
+    width: 90rem;
+    height: 65%; 
+    position: relative;
+    right: 2rem;
+    top: 3rem;
+    /* border: 1px solid #ccc; */
+  
   }
   .results img{
     width: 8.125rem;
     height: 8.3125rem;
+    margin-top: 5rem;
   }
   .results h1{
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
+    width: 8rem;
     font-size: 0.9375rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin: 20px 0 50px ;
-    text-align: center;
+    position: absolute;
+
   }
-  .results .userChoice{
-    display: flex;
-    justify-content: center;
+  .midButton h2{
+    font-size: 3.5rem; 
+  }
+ 
+  .house{
+    position: absolute;
+    right: 0;
   }
   .midButton{
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    bottom: 4rem;
+    left: 3rem;
   }
   .newGame{
-    background-color: var(--light-text);
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    color: var(--dark-text);
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.15s;
+    width: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

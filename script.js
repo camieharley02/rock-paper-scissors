@@ -1,5 +1,7 @@
 const rulesButton = document.querySelector('.rules-btn');
 const topRule = document.querySelector('.top-rule');
+const main = document.querySelector('.advance');
+let results = document.querySelector(".results"); // Move the declaration of 'results' here
 
 rulesButton.addEventListener('click', () => {
   topRule.innerHTML = `
@@ -16,6 +18,12 @@ rulesButton.addEventListener('click', () => {
   });
 });
 
+const option = {
+  "rock": "images/rock.svg",
+  "paper": "images/paper.svg",
+  "scissors": "images/scissors.svg",
+};
+
 const options = {
   "rock": "images/rock.svg",
   "paper": "images/paper.svg",
@@ -29,8 +37,7 @@ const userMove = (hand) => {
   let images = document.querySelector(".images");
   images.style.display = "none";
   // show second page
-  let results = document.querySelector(".results")
-  results.style.display = "flex"
+  results.style.display = "flex"; // Use 'results' directly here
 
   // displays user choice
   document.getElementById("userChoice").src = options[hand];
@@ -40,17 +47,26 @@ const userMove = (hand) => {
 }
 
 const computerMove = () => {
-  let hand = ["rock", "paper", "scissors", "lizard", "spock"];
-  let computerHand = hand[Math.floor(Math.random() * hand.length)];
+  const shosho = document.getElementById('advance2');
 
-  document.getElementById("computerChoice").src = options[computerHand];
+  if (shosho) {
+    let hand2 = ["rock", "paper", "scissors", "lizard", "spock"];
+    let computerHand2 = hand2[Math.floor(Math.random() * 5)];
+    document.getElementById("computerChoice").src = options[computerHand2];
+    
+    return computerHand2;
+  } else {
+    let hand = ["rock", "paper", "scissors"];
+    let computerHand = hand[Math.floor(Math.random() * 3)];
+    document.getElementById("computerChoice").src = option[computerHand];
 
-  return computerHand;
+    return computerHand;
+  }
 }
 
- let SCORE = 0;
+let SCORE = 0;
 
- const midButton = (userChoice, computerHand) => {
+const midButton = (userChoice, computerHand) => {
   const outcomes = {
     'rock': { 'rock': 'TIE', 'paper': 'YOU LOSE', 'scissors': 'YOU WIN', 'lizard': 'YOU WIN', 'spock': 'YOU LOSE' },
     'paper': { 'rock': 'YOU WIN', 'paper': 'TIE', 'scissors': 'YOU LOSE', 'lizard': 'YOU LOSE', 'spock': 'YOU WIN' },
@@ -61,20 +77,18 @@ const computerMove = () => {
 
   const result = outcomes[userChoice][computerHand];
   const scoreChange = result === 'YOU WIN' ? 1 : result === 'YOU LOSE' ? -1 : 0;
-  
+
   setDecision(result);
   setScore(SCORE + scoreChange);
-  
+
   // Add the winner class based on the result
   if (result === 'YOU WIN') {
-    results.getElementById('userChoice').classList.add('winner');
+    document.getElementById('userChoice').classList.add('winner');
   } else if (result === 'YOU LOSE') {
-    results.getElementById('computerChoice').classList.add('winner');
-  }  
+    document.getElementById('computerChoice').classList.add('winner');
   }
-  
+}
 
-let results = document.querySelector(".results");
 const restartGame = () => {
   results.style.display = "none";
 
@@ -83,15 +97,10 @@ const restartGame = () => {
 }
 
 const setDecision = (midText) => {
-  document.querySelector(".midText h1").innerText = midText;
+  document.querySelector(".midText h2").innerText = midText;
 }
+
 const setScore = (scores) => {
   SCORE = scores;
   document.querySelector(".scores span").innerText = scores;
 }
-  
-
-
-
-
-``

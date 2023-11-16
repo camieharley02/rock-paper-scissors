@@ -10,33 +10,32 @@
 <body>
   <div class="main">
     <header>
-      <img src="images/logo.svg" alt="logo" class="logo">
+      <img src="images/logo.svg" alt="logo">
       <div class="scores">
         <h1>SCORE</h1>
-        <span id="score">0</span>
+        <span>0</span>
       </div>
     </header>
     <section>
       <div class="images">
         <div class="choice paper">
-          <img class="paper" src="images/paper.svg"   alt="paper" onclick="userMove('paper')">
+          <img src="images/paper.svg"   alt="paper" onclick="userMove('paper')">
         </div>
         <div class="choice scissors">
-          <img class="scissors" src="images/scissors.svg" alt="scissors" onclick="userMove('scissors')">
+          <img src="images/scissors.svg" alt="scissors" onclick="userMove('scissors')">
         </div>
         <div class="choice rock">
-          <img class="rock" src="images/rock.svg" alt="rock" onclick="userMove('rock')">
+          <img src="images/rock.svg" alt="rock" onclick="userMove('rock')">
         </div>
       </div>  
     </section>
-    
     <div class="results">
       <div class="user">
         <h1>YOU PICKED</h1>
         <img id="userChoice" src="" alt="user picked">
       </div>
       <div class="midButton">
-        <div class="midText"><h1>YOU WIN</h1></div>
+        <div class="midText"><h2>YOU WIN</h2></div>
         <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
       </div>
       <div class="house">
