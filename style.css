@@ -306,8 +306,7 @@ flex-direction: row;
   }
   .header{
     width: 100vw;
-    height: 100vh;
-    
+    height: 100vh; 
     background-size: 19.0625rem 16.9375rem;
     text-align: center; 
     background-position: center;   

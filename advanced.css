@@ -18,6 +18,8 @@ header{
   width: 9.0625rem;
   height: 9.25rem;
   position: absolute;
+  align-items: center;
+  justify-content: center;
 }
 .choice img {
   width: 100%;
@@ -25,28 +27,28 @@ header{
  }
 
 .scissors {
-  top: 40%;
-  left: 60%;
+  top: 25%;
+  left: 45%;
   transform: translate(-50%, -50%);
 }
 .spock {
-  top: 60%;
-  left: 34%;
+  top: 48%;
+  left: 20%;
   transform: translate(-50%, -50%);
 }
 .paper {
-  top: 60%;
-  left: 85%;
+  top: 48%;
+  left: 70%;
   transform: translate(-50%, -50%);
 }
 .lizard {
-  top: 95%;
-  left: 40%;
+  top: 83%;
+  left: 30%;
   transform: translate(-50%, -50%);
 }
 .rock {
-  top: 95%;
-  left: 75%;
+  top: 83%;
+  left: 63%;
   transform: translate(-50%, -50%);
 }
 .header{
@@ -82,7 +84,13 @@ header{
     height: 14.1875rem;
     left: 14%;
   }
+  
   .header{
     background-size: 19.4375rem 19.0625rem;
+    text-align: center; 
+    background-position: center;   
+    z-index: 1;
+    width: 100vw;
+    height: 100vh; 
   }
 }
